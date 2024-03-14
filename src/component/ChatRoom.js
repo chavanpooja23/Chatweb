@@ -40,7 +40,7 @@ const ChatRoom = () => {
     } 
 
     const connect = () => {
-        let Sock = new SockJS('https://chatserver-qeup.onrender.com');
+        let Sock = new SockJS('https://chatserver-qeup.onrender.com/ws');
         stompClient = over(Sock);
         stompClient.connect({}, onConnected, onError);
     }
